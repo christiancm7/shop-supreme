@@ -1,0 +1,352 @@
+@font-face {
+	font-family:Futura Bold;
+	src:url(../fonts/futurabold.ttf);
+}
+
+@font-face {
+	font-family:Futura Bold Italic;
+	src:url(../fonts/futurabold-italic.ttf);
+}
+
+@font-face {
+	font-family:Futura Light;
+	src:url(../fonts/futuralight.ttf);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #f5f5f5;
+}
+
+/*Navbar*/
+
+.navbar {
+	padding-top:20px;
+	padding-left: 20px;
+	z-index: 100;
+}
+
+#logo {
+	font-family: "Futura Bold Italic";
+	font-size: 36px;
+	color: #FFF;
+	background-color: red;
+	display: inline-block;
+	padding:5px;
+}
+
+#logo a {
+	text-decoration: none;
+	color:#fff;
+}
+
+.nav {
+	display: inline-block;
+	float: right;
+}
+
+.nav a {
+	font-family: "Futura Light";
+	color: #1b1b1b;
+	display: inline-block;
+	margin: 10px 50px;
+	text-decoration: none;
+}
+
+.nav a:hover {
+	background: red;
+	color: #fff;
+}
+
+/*End navbar*/
+
+/*Main content*/
+
+.model {
+	display: inline-block;
+	float: left;
+}
+
+.info {
+	display: inline-block;
+	float: left;
+	max-width: 80%;
+	margin-left: 5%;
+	margin-top: 5%;
+}
+
+.info h1 {
+	font-family: "Futura Bold";
+}
+
+.info p {
+	font-family: "Futura Light";
+}
+
+.price {
+	font-family: "Futura Bold";
+	text-transform: uppercase;
+}
+
+.title {
+	font-family: "Futura Bold";
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+.sizes {
+	display: inline-block;
+}
+
+.sizes li {
+	font-family: "Futura ligt";
+	text-transform: uppercase;
+	font-size: 10px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	border: 1px solid black;
+	height: 30px;
+	width: 30px;
+	margin-left: 5px;
+}
+
+.sizes li:hover {
+	border: 1px solid red;
+	color: red;
+	cursor: pointer;
+}
+
+.action-btns {
+	font-family: "Futura Light";
+	text-transform: uppercase;
+}
+.action-btns .red-hollow-btn {
+	cursor: crosshair;
+	border: 2px solid red;
+	color: red;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 240px;
+	height: 65px;
+}
+.action-btns .red-hollow-btn:hover span {
+	display:none
+}
+.action-btns .red-hollow-btn:hover:before {
+	content:"sold out";
+}
+
+.action-btns .light-grey-btn {
+	cursor: pointer;
+	background: #d8d8d8;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 240px;
+	height: 65px;
+}
+
+.action-btns a {
+	text-decoration: none;
+	color: #1b1b1b;
+}
+
+/*End Main content*/
+
+/*Slideshow main settings*/
+
+.slidesContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-top: 100px;
+    overflow: hidden;
+} 
+
+.slideContent {
+ 	position: absolute;
+ 	z-index: 2;
+}
+
+/* Slides */
+
+.slide {
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top:0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	transform: translateY(100%);
+	transition: opacity 0.3s linear, visibility 0.3s linear;
+	opacity: 1;
+	visibility: visible;
+}
+.loading .slide {
+	opacity: 0;
+	visibility: hidden;
+}
+/* Side nav */
+
+.side-nav {
+	position: fixed;
+	right: 30px;
+	list-style: none;
+	z-index: 200;
+	margin: 0;
+	padding: 0;
+	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.side-nav a {
+	border: 2px solid  #d8d8d8;
+	margin-top: 10px;
+	width: 60px;
+	height: 52px;
+	transition: all 0.3s linear;
+	display: block;
+}
+
+
+.side-nav a:hover {
+	border: 2px solid  red;
+	margin-top: 10px; 
+}
+
+.side-nav li.active a {
+	border: 2px solid  red;
+}
+
+.liBg1 {
+	background: url('../img/jacket1.jpg');
+	background-size: cover; 
+}
+
+.liBg2 {
+	background: url('../img/jacket2.jpg');
+	background-size: cover;
+}
+
+.liBg3 {
+	background: url('../img/jacket3.jpg');
+	background-size: cover;
+}
+
+.liBg4 {
+	background: url('../img/jacket4.jpg');
+	background-size: cover;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.side-nav a {
+	border: 2px solid  #d8d8d8;
+	margin-top: 10px;
+	width: 30px;
+	height: 26px;
+	transition: all 0.3s linear;
+	display: block;
+	}
+	
+	.nav a {
+	font-family: "Futura Light";
+	color: #1b1b1b;
+	display: block;
+	margin:0;
+	text-decoration: none;
+	}
+
+	.model {
+	display:block;
+	height:40%;
+	}
+
+	.model img {
+		height: 30vh;
+	}
+
+	.action-btns .red-hollow-btn {
+		cursor: crosshair;
+		border: 2px solid red;
+		color: red;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 120px;
+		height: 35px;
+	}
+	.action-btns .light-grey-btn {
+		cursor: pointer;
+		background: #d8d8d8;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 120px;
+		height: 35px;
+	}
+
+
+
+}
+
+@media (max-width: 767px) {
+	.side-nav a {
+	border: 2px solid  #d8d8d8;
+	margin-top: 10px;
+	width: 30px;
+	height: 26px;
+	transition: all 0.3s linear;
+	display: block;
+	}
+	
+	.nav a {
+	font-family: "Futura Light";
+	color: #1b1b1b;
+	display: block;
+	margin:0;
+	text-decoration: none;
+	}
+
+	.model {
+	display:block;
+	height:40%;
+	}
+
+	.model img {
+		height: 30vh;
+	}
+
+	.action-btns .red-hollow-btn {
+		cursor: crosshair;
+		border: 2px solid red;
+		color: red;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 120px;
+		height: 35px;
+	}
+	.action-btns .light-grey-btn {
+		cursor: pointer;
+		background: #d8d8d8;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 120px;
+		height: 35px;
+	}
+
+
+
+
+}
